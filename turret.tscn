@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmuyixroffpwt"]
+
+[ext_resource type="Texture2D" uid="uid://drxhwgcp4pk32" path="res://sprites/td_basic_towers_0-removebg-preview (1).png" id="1_keajy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_djfqv"]
+radius = 698.161
+
+[node name="Turret" type="Sprite2D"]
+texture = ExtResource("1_keajy")
+
+[node name="Range" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Range"]
+shape = SubResource("CircleShape2D_djfqv")
