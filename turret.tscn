@@ -6,9 +6,11 @@
 radius = 698.161
 
 [node name="Turret" type="Sprite2D"]
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_keajy")
 
 [node name="Range" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Range"]
+scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_djfqv")

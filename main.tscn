@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bhogofd1of2ov"]
+[gd_scene load_steps=7 format=3 uid="uid://bhogofd1of2ov"]
 
 [ext_resource type="Texture2D" uid="uid://b32sfr1pw0cdm" path="res://Pixel Art Top Down - Basic/Texture/TX Tileset Grass.png" id="1_7a6w5"]
 [ext_resource type="Script" path="res://main.gd" id="1_ycd6x"]
@@ -266,6 +266,9 @@ texture = ExtResource("1_7a6w5")
 [sub_resource type="TileSet" id="TileSet_xtx14"]
 sources/0 = SubResource("TileSetAtlasSource_gnn0i")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vgmdu"]
+size = Vector2(630, 106.911)
+
 [node name="Main" type="Node2D"]
 script = ExtResource("1_ycd6x")
 turret1scene = ExtResource("2_edx65")
@@ -278,3 +281,14 @@ layer_0/tile_data = PackedInt32Array(131108, 0, 0, 196644, 0, 0, 262180, 0, 0, 3
 [node name="Camera2D" type="Camera2D" parent="TileMap"]
 position = Vector2(320, 192)
 zoom = Vector2(2, 2)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(339, 174)
+rotation = -2.72867
+scale = Vector2(1, 1)
+
+[node name="PathBlocker" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_vgmdu")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
