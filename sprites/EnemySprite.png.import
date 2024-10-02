@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drxhwgcp4pk32"
-path="res://.godot/imported/td_basic_towers_0-removebg-preview (1).png-69aa5420e348b14d52f94510d84dbfda.ctex"
+uid="uid://cp21k4req5q2e"
+path="res://.godot/imported/EnemySprite.png-fc21f7cfcd1b2b0e0617bc64f17a3941.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/td_basic_towers_0-removebg-preview (1).png"
-dest_files=["res://.godot/imported/td_basic_towers_0-removebg-preview (1).png-69aa5420e348b14d52f94510d84dbfda.ctex"]
+source_file="res://sprites/EnemySprite.png"
+dest_files=["res://.godot/imported/EnemySprite.png-fc21f7cfcd1b2b0e0617bc64f17a3941.ctex"]
 
 [params]
 

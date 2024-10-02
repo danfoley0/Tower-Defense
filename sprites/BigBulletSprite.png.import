@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://q0r1583fhqa0"
-path="res://.godot/imported/td_basic_towers_0-removebg-preview.png-b4e30d4b0c64269d76b729bad0593bbe.ctex"
+uid="uid://cy5vwldnni8ki"
+path="res://.godot/imported/BigBulletSprite.png-d30e1bc31e278aec3124806bd0ed09e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/td_basic_towers_0-removebg-preview.png"
-dest_files=["res://.godot/imported/td_basic_towers_0-removebg-preview.png-b4e30d4b0c64269d76b729bad0593bbe.ctex"]
+source_file="res://sprites/BigBulletSprite.png"
+dest_files=["res://.godot/imported/BigBulletSprite.png-d30e1bc31e278aec3124806bd0ed09e4.ctex"]
 
 [params]
 

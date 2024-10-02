@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://cgvlb5qseuucv"]
+
+[ext_resource type="Texture2D" uid="uid://48fjallikgjt" path="res://sprites/Turret2Sprite.png" id="1_w64ln"]
+[ext_resource type="Script" path="res://turret_2.gd" id="2_1agkl"]
+[ext_resource type="PackedScene" uid="uid://brpe43s5mekn5" path="res://turret_3.tscn" id="3_p3c1l"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_djfqv"]
+radius = 698.161
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ro2u"]
+size = Vector2(76, 114)
+
+[node name="Turret2" type="Sprite2D"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_w64ln")
+script = ExtResource("2_1agkl")
+turret3scene = ExtResource("3_p3c1l")
+
+[node name="Range" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Range"]
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CircleShape2D_djfqv")
+
+[node name="Tower2Area" type="Area2D" parent="."]
+
+[node name="Tower2Collision" type="CollisionShape2D" parent="Tower2Area"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_4ro2u")
+
+[connection signal="mouse_entered" from="Tower2Area" to="." method="_on_tower_2_area_mouse_entered"]
+[connection signal="mouse_exited" from="Tower2Area" to="." method="_on_tower_2_area_mouse_exited"]

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://brpe43s5mekn5"]
+
+[ext_resource type="Texture2D" uid="uid://dcky3gxkk3rqt" path="res://sprites/Turret3Sprite.png" id="1_vghrr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_djfqv"]
+radius = 698.161
+
+[node name="Turret3" type="Sprite2D"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_vghrr")
+
+[node name="Range" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Range"]
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CircleShape2D_djfqv")
