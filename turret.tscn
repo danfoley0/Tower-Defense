@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cmuyixroffpwt"]
 
-[ext_resource type="Texture2D" uid="uid://drxhwgcp4pk32" path="res://sprites/Turret1Sprite.png" id="1_keajy"]
+[ext_resource type="Texture2D" uid="uid://drxhwgcp4pk32" path="res://sprites/Turret1Sprite.png" id="1_77gcs"]
 [ext_resource type="Script" path="res://turret.gd" id="2_o4f8l"]
 [ext_resource type="PackedScene" uid="uid://cgvlb5qseuucv" path="res://turret_2.tscn" id="3_p8ylc"]
 
@@ -12,7 +12,7 @@ size = Vector2(56, 96)
 
 [node name="Turret" type="Sprite2D"]
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_keajy")
+texture = ExtResource("1_77gcs")
 script = ExtResource("2_o4f8l")
 turret2scene = ExtResource("3_p8ylc")
 
@@ -27,6 +27,11 @@ shape = SubResource("CircleShape2D_djfqv")
 [node name="TowerCollision" type="CollisionShape2D" parent="TowerArea"]
 shape = SubResource("RectangleShape2D_benap")
 
+[node name="Muzzle" type="Marker2D" parent="."]
+position = Vector2(0, -8)
+
+[connection signal="area_entered" from="Range" to="." method="_on_range_area_entered"]
+[connection signal="body_entered" from="Range" to="." method="_on_range_body_entered"]
 [connection signal="mouse_entered" from="Range" to="." method="_on_range_mouse_entered"]
 [connection signal="mouse_exited" from="Range" to="." method="_on_range_mouse_exited"]
 [connection signal="mouse_entered" from="TowerArea" to="." method="_on_tower_area_mouse_entered"]
